@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | Brian Button Lab | UNC</title>
+    <meta name="description" content="Publications from the Brian Button Lab at UNC — airway mucus biology, cystic fibrosis, mucociliary clearance.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ── Navigation ── -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="20" cy="14" r="6" fill="currentColor"/>
+                    <path d="M12 26c0-4 4-8 8-8s8 4 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+                </svg>
+                <span class="nav-logo-text">Brian Button Lab</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html" class="active">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="collaborators.html">Collaborators</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── Page Header ── -->
+    <header class="page-header">
+        <h1>Publications</h1>
+        <p>Research from the Button Lab on airway mucus biology, mucociliary clearance, and cystic fibrosis — synced from PubMed, including preprints.</p>
+    </header>
+
+    <!-- ── Main Content ── -->
+    <section class="section">
+        <div class="container">
+            <div class="pub-layout" id="pubLayout">
+                <!-- Sidebar (year nav) injected by JS -->
+                <nav class="pub-sidebar" id="pubSidebar">
+                    <h3>Jump to year</h3>
+                </nav>
+                <!-- Publication list injected by JS -->
+                <div id="pubList"></div>
+            </div>
+
+            <div class="pubs-foot">
+                <p>For the most current list, visit our PubMed feed.</p>
+                <a class="btn" href="https://pubmed.ncbi.nlm.nih.gov/?term=Brian+Button&sort=date" target="_blank" rel="noopener">
+                    <span>View on PubMed</span><span class="arrow">↗</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Brian Button Lab</h3>
+                <p>Advancing understanding of airway mucus biology and cystic fibrosis through rigorous biophysical research at the University of North Carolina.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Research</h4>
+                <ul>
+                    <li><a href="research.html">Overview</a></li>
+                    <li><a href="research.html#cf-mucus">CF &amp; Mucus</a></li>
+                    <li><a href="research.html#asl">ASL Regulation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Lab</h4>
+                <ul>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="pictures.html">Pictures</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="links.html">External Links</a></li>
+                                        <li><a href="collaborators.html">Collaborators</a></li>
+<li><a href="https://www.med.unc.edu" target="_blank">UNC Medicine</a></li>
+                    <li><a href="https://www.cff.org" target="_blank">CF Foundation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>University of North Carolina School of Medicine</span>
+            <span>&copy; 2026 Brian Button Lab. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        document.getElementById('navToggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+
+        // ── Load and render publications from JSON ──
+        async function loadPublications() {
+            let pubs;
+            try {
+                const res = await fetch('publications.json');
+                pubs = await res.json();
+            } catch (e) {
+                document.getElementById('pubList').innerHTML =
+                    '<p style="color:var(--color-text-muted)">Could not load publications. Make sure publications.json is in the same folder.</p>';
+                return;
+            }
+
+            // Group by year (descending)
+            const byYear = {};
+            pubs.forEach(p => {
+                if (!byYear[p.year]) byYear[p.year] = [];
+                byYear[p.year].push(p);
+            });
+            const years = Object.keys(byYear).map(Number).sort((a, b) => b - a);
+
+            // Build sidebar
+            const sidebar = document.getElementById('pubSidebar');
+            years.forEach(y => {
+                const a = document.createElement('a');
+                a.href = '#y' + y;
+                a.textContent = y;
+                sidebar.appendChild(a);
+            });
+
+            // Build pub list
+            const list = document.getElementById('pubList');
+            years.forEach(y => {
+                const yearPubs = byYear[y];
+                const section = document.createElement('div');
+                section.className = 'pub-year';
+                section.id = 'y' + y;
+
+                const head = document.createElement('div');
+                head.className = 'pub-year__head';
+                head.innerHTML = `
+                    <div class="pub-year__num">${y}</div>
+                    <div class="pub-year__count">${yearPubs.length} publication${yearPubs.length !== 1 ? 's' : ''}</div>
+                `;
+                section.appendChild(head);
+
+                const ol = document.createElement('ol');
+                ol.className = 'pub-list';
+
+                yearPubs.forEach(p => {
+                    // Bold the PI's name in the author string
+                    let authorsHtml = p.authors;
+                    if (p.authors_highlight) {
+                        p.authors_highlight.forEach(name => {
+                            authorsHtml = authorsHtml.replace(
+                                new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
+                                `<strong>${name}</strong>`
+                            );
+                        });
+                    }
+
+                    const cite = [p.journal, p.volume ? `${p.volume}${p.issue ? '(' + p.issue + ')' : ''}` : '', p.pages, p.date]
+                        .filter(Boolean).join(' · ');
+
+                    const titleHtml = p.url
+                        ? `<a href="${p.url}" target="_blank" rel="noopener">${p.title}</a>`
+                        : p.title;
+                    const pmidHtml = p.pmid
+                        ? ` <span class="pub__pmid">PMID ${p.pmid}</span>`
+                        : '';
+
+                    const li = document.createElement('li');
+                    li.className = 'pub';
+                    li.innerHTML = `
+                        <div class="pub__title">
+                            ${titleHtml}
+                        </div>
+                        <div class="pub__authors">${authorsHtml}</div>
+                        <div class="pub__cite">${cite}${pmidHtml}</div>
+                    `;
+                    ol.appendChild(li);
+                });
+
+                section.appendChild(ol);
+                list.appendChild(section);
+            });
+
+            // Highlight active year on scroll
+            const sections = document.querySelectorAll('.pub-year');
+            const sideLinks = sidebar.querySelectorAll('a');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        sideLinks.forEach(a => a.classList.remove('active'));
+                        const active = sidebar.querySelector(`a[href="#${entry.target.id}"]`);
+                        if (active) active.classList.add('active');
+                    }
+                });
+            }, { rootMargin: '-30% 0px -60% 0px' });
+            sections.forEach(s => observer.observe(s));
+        }
+
+        loadPublications();
+    </script>
+    <script src="mucus-bg.js"></script>
+</body>
+</html>

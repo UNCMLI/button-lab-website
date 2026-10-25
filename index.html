@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brian Button Lab | Airway Mucus Biology &amp; Cystic Fibrosis Research | UNC</title>
+    <meta name="description" content="Investigating airway mucus biology, mucociliary clearance, and cystic fibrosis at the University of North Carolina School of Medicine.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ── Navigation ── -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="20" cy="14" r="6" fill="currentColor"/>
+                    <path d="M12 26c0-4 4-8 8-8s8 4 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+                </svg>
+                <span class="nav-logo-text">Brian Button Lab</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="collaborators.html">Collaborators</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ── Hero ── -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="imgs/airway-microscopy.jpg" alt="Airway epithelium microscopy">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                </svg>
+                University of North Carolina School of Medicine
+            </div>
+            <h1 class="hero-title">Brian Button Lab</h1>
+            <p class="hero-subtitle">Advancing the understanding of airway mucus biology, mucociliary clearance, and cystic fibrosis pathogenesis through rigorous biophysical research.</p>
+            <a href="research.html" class="hero-cta">Explore Our Research</a>
+        </div>
+    </section>
+
+    <!-- ── About ── -->
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <p class="section-label">About Our Lab</p>
+                    <h2 class="section-title">Decoding the Mucus Barrier</h2>
+                    <p>The Button Lab investigates the biophysical mechanisms governing airway mucus clearance—a fundamental defense system whose failure underlies cystic fibrosis, chronic bronchitis, and bronchiectasis.</p>
+                    <p>We combine quantitative biophysics, cellular physiology, and computational modeling to understand how the lung maintains a precisely hydrated periciliary layer and a properly organized mucus layer, and why these structures collapse in muco-obstructive diseases.</p>
+                    <p>Our work spans from single-molecule interactions to human clinical studies, reflecting our conviction that the most impactful science bridges scales and disciplines.</p>
+                </div>
+                <div class="about-image">
+                    <img src="imgs/mucus-clearance-diagram.jpg" alt="Mucus clearance mechanism">
+                </div>
+            </div>
+
+            <div class="mission-box">
+                <h3>Our Mission</h3>
+                <p>To define the mechanical and chemical rules that govern mucociliary transport, translate those rules into actionable therapeutic strategies, and train the next generation of scientists who will advance respiratory biology. We believe that progress in treating lung disease requires first understanding normal physiology at a mechanistic level—and that deep mechanistic insight enables transformative, not merely incremental, therapeutic advances.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Research Areas ── -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Our Focus</p>
+                <h2 class="section-title">Research Areas</h2>
+                <p class="section-subtitle">Interconnected research themes addressing the fundamental mechanisms of airway mucus clearance.</p>
+            </div>
+            <div class="research-preview">
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Cystic Fibrosis &amp; Mucus Dysfunction</h3>
+                    <p class="research-card-desc">Investigating how CFTR dysfunction leads to thickened, adherent mucus that impairs clearance and drives chronic infection.</p>
+                    <a href="research.html#cf-mucus" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="4"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Airway Surface Liquid Regulation</h3>
+                    <p class="research-card-desc">Understanding the precise regulation of ASL volume and composition, and how hydration status governs clearance efficiency.</p>
+                    <a href="research.html#asl" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Mucociliary Clearance Mechanics</h3>
+                    <p class="research-card-desc">Quantitative measurement and modeling of the mechanical processes underlying mucus transport.</p>
+                    <a href="research.html#clearance" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 2v20"/><path d="M8 5c2-2 6-2 8 0"/><path d="M8 12c2-2 6-2 8 0"/><path d="M8 19c2-2 6-2 8 0"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Primary Ciliary Dyskinesia</h3>
+                    <p class="research-card-desc">Defining how ciliary dysfunction, mucus properties, breathing, and gas-liquid transport determine clearance in ciliopathies.</p>
+                    <a href="research.html#pcd" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Mucus Plug Pathogenesis &amp; Clearance</h3>
+                    <p class="research-card-desc">Determining how hyperconcentrated plugs remodel airways and developing combination therapies to dissolve and clear them.</p>
+                    <a href="research.html#mucus-plugs" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Therapeutic Approaches</h3>
+                    <p class="research-card-desc">Developing and validating pharmacological and physical interventions to restore mucus clearance.</p>
+                    <a href="research.html#therapy" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Computational &amp; Mathematical Models</h3>
+                    <p class="research-card-desc">Integrating experimental data with quantitative models to predict mucus transport behavior.</p>
+                    <a href="research.html#models" class="research-card-link">Learn more &rarr;</a>
+                </div>
+                <div class="research-card">
+                    <div class="research-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h3 class="research-card-title">Periciliary Brush Model</h3>
+                    <p class="research-card-desc">Our landmark discovery of the brush-like structure that separates mucus from the airway epithelium.</p>
+                    <a href="research.html#brush" class="research-card-link">Learn more &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Key Discoveries ── -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Scientific Impact</p>
+                <h2 class="section-title">Key Discoveries</h2>
+                <p class="section-subtitle">Landmark contributions that have reshaped understanding of airway mucus biology.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;">
+                <div style="background:white;border-radius:12px;padding:24px;border:1px solid var(--color-border);">
+                    <span style="display:inline-block;background:var(--color-navy);color:white;padding:4px 12px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:12px;">2012</span>
+                    <h4 style="font-family:var(--font-heading);font-size:18px;margin-bottom:8px;">The Periciliary Brush Model</h4>
+                    <p style="color:var(--color-text-muted);font-size:14px;line-height:1.7;">Science — Discovered the brush-like structure of the periciliary layer that prevents mucus penetration.</p>
+                </div>
+                <div style="background:white;border-radius:12px;padding:24px;border:1px solid var(--color-border);">
+                    <span style="display:inline-block;background:var(--color-navy);color:white;padding:4px 12px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:12px;">2018</span>
+                    <h4 style="font-family:var(--font-heading);font-size:18px;margin-bottom:8px;">Mucus Adhesion &amp; Cohesion</h4>
+                    <p style="color:var(--color-text-muted);font-size:14px;line-height:1.7;">PNAS — Elucidated biophysical mechanisms governing mucus adhesion and cohesion in cough clearance.</p>
+                </div>
+                <div style="background:white;border-radius:12px;padding:24px;border:1px solid var(--color-border);">
+                    <span style="display:inline-block;background:var(--color-navy);color:white;padding:4px 12px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:12px;">2022</span>
+                    <h4 style="font-family:var(--font-heading);font-size:18px;margin-bottom:8px;">Submucosal Gland Dysfunction</h4>
+                    <p style="color:var(--color-text-muted);font-size:14px;line-height:1.7;">Science Advances — Unified understanding of airway defects in CF through gland dysfunction.</p>
+                </div>
+                <div style="background:white;border-radius:12px;padding:24px;border:1px solid var(--color-border);">
+                    <span style="display:inline-block;background:var(--color-navy);color:white;padding:4px 12px;border-radius:100px;font-size:13px;font-weight:600;margin-bottom:12px;">2026</span>
+                    <h4 style="font-family:var(--font-heading);font-size:18px;margin-bottom:8px;">Cilia-Independent Gas-Liquid Transport</h4>
+                    <p style="color:var(--color-text-muted);font-size:14px;line-height:1.7;">Journal of Clinical Investigation — Established tidal-breathing-driven, cilia-independent gas-liquid transport as a third mechanism of airway mucus clearance, significant when ciliary function is impaired.</p>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:40px;">
+                <a href="research.html" style="color:var(--color-navy);font-weight:600;text-decoration:none;">View all discoveries &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-section">
+        <h2>Interested in Our Research?</h2>
+        <p>Explore our detailed research areas, browse our publications, or get in touch to discuss collaboration opportunities.</p>
+        <div class="cta-buttons">
+            <a href="research.html" class="cta-btn cta-btn-primary">Research Areas</a>
+            <a href="contact.html" class="cta-btn cta-btn-secondary">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Brian Button Lab</h3>
+                <p>Advancing understanding of airway mucus biology and cystic fibrosis through rigorous biophysical research at the University of North Carolina.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Research</h4>
+                <ul>
+                    <li><a href="research.html">Overview</a></li>
+                    <li><a href="research.html#cf-mucus">CF &amp; Mucus</a></li>
+                    <li><a href="research.html#asl">ASL Regulation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Lab</h4>
+                <ul>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="pictures.html">Pictures</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="links.html">External Links</a></li>
+                                        <li><a href="collaborators.html">Collaborators</a></li>
+<li><a href="https://www.med.unc.edu" target="_blank">UNC Medicine</a></li>
+                    <li><a href="https://www.cff.org" target="_blank">CF Foundation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>University of North Carolina School of Medicine</span>
+            <span>&copy; 2026 Brian Button Lab. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+    <script src="mucus-bg.js"></script>
+</body>
+</html>

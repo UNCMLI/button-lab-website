@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Lab Retreat 2024",
+    "date": "October 2024",
+    "photos": [
+      {
+        "src": "imgs/gallery/retreat-2024-01.jpg",
+        "caption": "Group photo at the fall retreat"
+      },
+      {
+        "src": "imgs/gallery/retreat-2024-02.jpg",
+        "caption": "Science discussions"
+      },
+      {
+        "src": "imgs/gallery/retreat-2024-03.jpg",
+        "caption": "Team dinner"
+      }
+    ]
+  },
+  {
+    "title": "Lab Outing — Hiking",
+    "date": "August 2024",
+    "photos": [
+      {
+        "src": "imgs/gallery/hike-2024-01.jpg",
+        "caption": "Eno River trail"
+      }
+    ]
+  },
+  {
+    "title": "Lab Meeting & Science",
+    "date": "Ongoing",
+    "photos": [
+      {
+        "src": "imgs/gallery/lab-meeting-01.jpg",
+        "caption": "Weekly lab meeting"
+      },
+      {
+        "src": "imgs/gallery/bench-01.jpg",
+        "caption": "At the bench"
+      }
+    ]
+  }
+]

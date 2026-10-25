@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Brian Button Lab | UNC</title>
+    <meta name="description" content="Contact Brian Button Lab at UNC for research inquiries, collaboration opportunities, and training positions.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific styles not in style.css */
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 28px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+        }
+        .contact-card .contact-icon {
+            width: 56px; height: 56px;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-navy) 100%);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px;
+            color: white;
+        }
+        .contact-card h3 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 8px; color: var(--color-text); }
+        .contact-card p { font-size: 14px; color: var(--color-text-muted); line-height: 1.6; }
+        .contact-card a { color: var(--color-navy); text-decoration: none; }
+        .contact-card a:hover { text-decoration: underline; }
+
+        .contact-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .positions-box {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-navy) 100%);
+            border-radius: 16px; padding: 40px; color: white; margin-bottom: 32px;
+        }
+        .positions-box h2 { font-family: var(--font-heading); font-size: 24px; margin-bottom: 16px; }
+        .positions-box p { opacity: 0.9; margin-bottom: 20px; line-height: 1.8; }
+        .position-list { list-style: none; }
+        .position-list li {
+            padding: 16px 20px; background: rgba(255,255,255,0.1);
+            border-radius: 8px; margin-bottom: 12px;
+        }
+        .position-list li:last-child { margin-bottom: 0; }
+        .position-list strong { display: block; font-size: 16px; margin-bottom: 4px; }
+        .position-list span { font-size: 14px; opacity: 0.9; }
+
+        .undergrad-section {
+            background: var(--color-bg-alt); border-radius: 16px; padding: 40px; margin-bottom: 32px;
+        }
+        .undergrad-section h2 { font-family: var(--font-heading); font-size: 24px; color: var(--color-primary); margin-bottom: 20px; }
+        .undergrad-section p { color: var(--color-text-muted); margin-bottom: 16px; line-height: 1.8; }
+        .undergrad-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+        .undergrad-topics span {
+            background: white; padding: 8px 16px; border-radius: 6px;
+            font-size: 13px; color: var(--color-text-muted); border: 1px solid var(--color-border);
+        }
+
+        .mailing-address {
+            background: white; border-radius: 12px; padding: 24px;
+            border: 1px solid var(--color-border); text-align: center; margin-top: 32px;
+        }
+        .mailing-address h4 { font-family: var(--font-heading); font-size: 16px; color: var(--color-primary); margin-bottom: 8px; }
+        .mailing-address p { font-size: 14px; color: var(--color-text-muted); margin: 0; line-height: 1.8; }
+
+        @media (max-width: 768px) { .contact-cards-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="20" cy="14" r="6" fill="currentColor"/>
+                    <path d="M12 26c0-4 4-8 8-8s8 4 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+                </svg>
+                <span class="nav-logo-text">Brian Button Lab</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="collaborators.html">Collaborators</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Contact Us</h1>
+        <p>Get in touch for research inquiries, collaboration opportunities, or information about training positions.</p>
+    </header>
+
+    <section class="section">
+        <div class="container--narrow">
+
+            <div class="contact-cards-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:bbutton@med.unc.edu">bbutton@med.unc.edu</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Location</h3>
+                    <p>UNC School of Medicine<br>Chapel Hill, NC</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3>Response Time</h3>
+                    <p>We typically respond to inquiries within 2–3 business days.</p>
+                </div>
+            </div>
+
+            <div class="positions-box">
+                <h2>Open Positions</h2>
+                <p>We are always looking for talented and motivated individuals to join our team. If you are interested in airway biology, biophysics, or computational modeling of pulmonary disease, we encourage you to reach out.</p>
+                <ul class="position-list">
+                    <li>
+                        <strong>Postdoctoral Researcher</strong>
+                        <span>Seeking candidates with experience in airway biology, biophysics, or computational modeling. Competitive salary and benefits.</span>
+                    </li>
+                    <li>
+                        <strong>Graduate Student Positions</strong>
+                        <span>PhD positions available through Cell Biology, Physiology, and Biomedical Engineering programs.</span>
+                    </li>
+                    <li>
+                        <strong>Research Associate</strong>
+                        <span>Technical positions for experienced researchers. Background in cell culture, molecular biology, or imaging preferred.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="undergrad-section">
+                <h2>Undergraduate Students</h2>
+                <p>We welcome undergraduate students interested in respiratory biology and lung disease research. Undergraduates can contribute to ongoing projects, learn experimental techniques, and gain research experience in a collaborative academic environment.</p>
+                <p>Ideal candidates are students with a strong interest in cell biology, physiology, or biophysics who are looking to pursue graduate studies or careers in biomedical research.</p>
+                <p>Undergraduates typically commit to at least one year of research involvement, with a minimum of 10 hours per week during the academic year.</p>
+                <div class="undergrad-topics">
+                    <span>Mucus Biology</span>
+                    <span>Airway Physiology</span>
+                    <span>Cell Culture</span>
+                    <span>Microscopy</span>
+                    <span>Data Analysis</span>
+                    <span>Scientific Writing</span>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>Research Collaboration</h2>
+                <p>We actively collaborate with researchers at UNC and institutions worldwide. If you are interested in discussing potential collaborations, please include a brief description of your research interests and expertise.</p>
+                <p>Our lab works closely with:</p>
+                <ul>
+                    <li><strong>Marsico Lung Institute</strong> — UNC's center for pulmonary research and clinical care</li>
+                    <li><strong>CF Research Center</strong> — Leading CF research and care institution</li>
+                    <li><strong>Department of Biochemistry &amp; Biophysics</strong> — Academic home department</li>
+                    <li><strong>Virtual Lung Group</strong> — Multidisciplinary team of physicists, mathematicians, and biologists</li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>Media &amp; Press Inquiries</h2>
+                <p>For media inquiries, interview requests, or information about our research for publication, please contact Dr. Button directly via email. We are happy to discuss our work and its implications for understanding and treating lung disease.</p>
+            </div>
+
+            <div class="mailing-address">
+                <h4>Mailing Address</h4>
+                <p>
+                    Brian Button Lab<br>
+                    University of North Carolina School of Medicine<br>
+                    Department of Biochemistry &amp; Biophysics<br>
+                    Chapel Hill, NC 27599
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Brian Button Lab</h3>
+                <p>Advancing understanding of airway mucus biology and cystic fibrosis through rigorous biophysical research at the University of North Carolina.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Research</h4>
+                <ul>
+                    <li><a href="research.html">Overview</a></li>
+                    <li><a href="research.html#cf-mucus">CF &amp; Mucus</a></li>
+                    <li><a href="research.html#asl">ASL Regulation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Lab</h4>
+                <ul>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="pictures.html">Pictures</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="links.html">External Links</a></li>
+                                        <li><a href="collaborators.html">Collaborators</a></li>
+<li><a href="https://www.med.unc.edu" target="_blank">UNC Medicine</a></li>
+                    <li><a href="https://www.cff.org" target="_blank">CF Foundation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>University of North Carolina School of Medicine</span>
+            <span>&copy; 2026 Brian Button Lab. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+    <script src="mucus-bg.js"></script>
+</body>
+</html>

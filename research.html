@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research | Brian Button Lab | UNC</title>
+    <meta name="description" content="Detailed research areas covering cystic fibrosis, airway surface liquid regulation, mucociliary clearance, and therapeutic approaches.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Page-specific styles */
+        .research-area {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 32px;
+            border: 1px solid var(--color-border);
+            box-shadow: var(--shadow-sm);
+        }
+        .research-area h2 { font-family: var(--font-heading); font-size: 26px; color: var(--color-primary); margin-bottom: 16px; padding-bottom: 16px; border-bottom: 2px solid var(--color-navy); }
+        .research-area p { color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.8; }
+        .research-area h3 { font-family: var(--font-heading); font-size: 18px; color: var(--color-text); margin: 24px 0 12px; }
+        .research-area ul { list-style: none; padding-left: 0; }
+        .research-area li { position: relative; padding-left: 24px; margin-bottom: 8px; color: var(--color-text-muted); }
+        .research-area li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; background: var(--color-navy); border-radius: 50%; }
+        .research-area .approach-box { background: var(--color-bg-alt); border-radius: 12px; padding: 24px; margin-top: 24px; }
+        .research-area .approach-box h4 { font-family: var(--font-heading); font-size: 16px; color: var(--color-primary); margin-bottom: 12px; }
+        .research-area .approach-box p { margin: 0; }
+
+        .philosophy-section { background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-navy) 100%); border-radius: 24px; padding: 48px; color: white; margin: 64px 0; }
+        .philosophy-section h2 { font-family: var(--font-heading); font-size: 32px; margin-bottom: 24px; }
+        .philosophy-section p { opacity: 0.9; line-height: 1.8; margin-bottom: 20px; }
+        .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 32px; }
+        .pillar { background: rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center; }
+        .pillar h4 { font-family: var(--font-heading); font-size: 16px; margin-bottom: 8px; }
+        .pillar p { font-size: 14px; margin: 0; }
+
+        .video-section { margin: 64px 0; }
+        .video-container { position: relative; max-width: 800px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-lg); }
+        .video-container video { width: 100%; display: block; }
+        .video-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px; background: linear-gradient(transparent, rgba(27,54,93,0.9)); color: white; }
+        .video-overlay h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 4px; }
+        .video-overlay p { font-size: 14px; opacity: 0.9; margin: 0; }
+
+        .discoveries-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 48px; }
+        .discovery-card { background: white; border-radius: 12px; padding: 28px; border: 1px solid var(--color-border); }
+        .discovery-card .year { display: inline-block; background: var(--color-navy); color: white; padding: 4px 12px; border-radius: 100px; font-size: 13px; font-weight: 600; margin-bottom: 12px; }
+        .discovery-card h4 { font-family: var(--font-heading); font-size: 18px; margin-bottom: 8px; color: var(--color-text); }
+        .discovery-card .journal { font-style: italic; color: var(--color-navy); font-size: 14px; margin-bottom: 12px; }
+        .discovery-card p { color: var(--color-text-muted); font-size: 14px; line-height: 1.7; margin: 0; }
+
+        @media (max-width: 768px) {
+            .research-area { padding: 28px; }
+            .pillars { grid-template-columns: 1fr; }
+            .discoveries-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="20" cy="14" r="6" fill="currentColor"/>
+                    <path d="M12 26c0-4 4-8 8-8s8 4 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.5"/>
+                </svg>
+                <span class="nav-logo-text">Brian Button Lab</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="pictures.html">Pictures</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="collaborators.html">Collaborators</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Research Areas</h1>
+        <p>Investigating the fundamental mechanisms of airway mucus clearance and its dysfunction in disease.</p>
+    </header>
+
+    <section class="section" id="cf-mucus">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 1</p>
+                <h2 class="section-title">Cystic Fibrosis &amp; Mucus Dysfunction</h2>
+            </div>
+            <div class="research-area">
+                <p>Airway mucus clearance depends on the coordinated function of the periciliary layer (PCL) and the overlaying mucus gel. The PCL, a water-rich layer directly adjacent to the epithelium, lubricates ciliary beating; the mucus layer traps particles and is transported by cilia. When mucus becomes hyperconcentrated—too thick and dehydrated—it adheres to the airway surface and clearance fails.</p>
+                <p>Our work has established <strong>mucus hyperconcentration</strong> as a unifying mechanism in chronic bronchitis, cystic fibrosis, and bronchiectasis, explaining why structurally different diseases share a common physiological phenotype.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>What determines optimal mucus hydration at the molecular level?</li>
+                    <li>How does mucus concentration regulate osmotic pressure and transport?</li>
+                    <li>Can we restore normal clearance by correcting mucus concentration?</li>
+                    <li>What role do submucosal glands play in CF airway dysfunction?</li>
+                    <li>How do mucus plugs form, and what determines whether they dissolve or persist?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>We combine in vitro air-liquid interface cultures, mouse models, and human clinical studies to measure mucus concentration, osmotic pressure, and transport rates. Our landmark 2012 Science paper identified the periciliary brush—a proteoglycan-rich matrix that physically separates mucus from the epithelial surface—as essential for maintaining a distinct PCL.</p>
+                <div class="approach-box">
+                    <h4>Clinical Relevance</h4>
+                    <p>Understanding mucus hyperconcentration has directly informed hydration-based therapeutic strategies now used in CF treatment, including hypertonic saline therapy and CFTR modulators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="asl">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 2</p>
+                <h2 class="section-title">Airway Surface Liquid Regulation</h2>
+            </div>
+            <div class="research-area">
+                <p>The airway surface liquid (ASL) is a thin fluid layer that bathes the respiratory epithelium. Its volume and composition determine ciliary beat frequency, mucus hydration, and the efficiency of mucociliary transport. ASL volume is regulated by a balance of ion transport (especially CFTR-mediated chloride secretion and ENaC-mediated sodium absorption), osmotic forces, and mechanical shear stress.</p>
+                <p>We discovered that mechanical forces—breathing, coughing—trigger ATP release from airway epithelia, which activates purinergic receptors and drives transient ASL secretion. This mechanochemical feedback loop helps maintain hydration during variable physiological conditions.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>How do cells sense and respond to mechanical stress?</li>
+                    <li>What role does ATP/adenosine signaling play in ASL volume regulation?</li>
+                    <li>How is ASL homeostasis disrupted in cystic fibrosis?</li>
+                    <li>What are the critical thresholds for ASL volume supporting normal clearance?</li>
+                    <li>How do environmental stressors — warming climates, dry inhaled air, and heat — challenge ASL homeostasis?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>Our work combines electrophysiology, live-cell imaging, and mathematical modeling to characterize the feedback circuits that regulate ASL. We demonstrated that CFTR-dependent anion secretion is required for maintaining ASL volume under basal conditions and that defective CFTR leads to ASL dehydration via increased ENaC activity.</p>
+                <div class="approach-box">
+                    <h4>Therapeutic Implications</h4>
+                    <p>These findings have guided the development of ion transport modulators and osmotic agents designed to restore ASL volume in muco-obstructive diseases.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="clearance">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 3</p>
+                <h2 class="section-title">Mucociliary Clearance Mechanics</h2>
+            </div>
+            <div class="research-area">
+                <p>Cough is the lungs' backup clearance mechanism when ciliary transport fails. We discovered that cough clearance depends critically on the adhesive and cohesive forces within the mucus layer. Highly concentrated, viscous mucus adheres strongly to the airway surface (increased adhesion) and to itself (increased cohesion), resisting removal by airflow.</p>
+                <p>Our peel force measurements revealed that CF and chronic bronchitis mucus exhibits dramatically elevated adhesive and cohesive forces compared to normal mucus. This mechanical abnormality explains why patients with thick mucus cannot clear secretions even with vigorous coughing.</p>
+                <p>We recently identified a <strong>third mechanism of mucus clearance</strong>: cilia-independent gas-liquid transport (GLT), in which airflow during tidal breathing propels mucus along the airway surface even when cilia cannot. Using in vitro airway cultures and cilia-deficient mice, we demonstrated that GLT occurs at tidal-breathing flow rates, depends critically on mucus concentration, and is modulated by breathing frequency and body orientation — establishing GLT as a clinically significant clearance pathway in ciliary dysfunction and pointing to exercise-, hydration-, and mucolytic-based strategies to restore clearance in these patients.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>What molecular properties of mucins determine adhesion and cohesion?</li>
+                    <li>How do we quantify these mechanical properties in patient samples?</li>
+                    <li>Can we reduce adhesion/cohesion therapeutically without disrupting normal function?</li>
+                    <li>What is the relationship between mucus rheology and clearance efficiency?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>We developed novel microforce balance techniques to measure mucus peel forces from airway surfaces. These methods enable direct mechanical characterization of mucus from patients and animal models, providing quantitative endpoints for therapeutic testing.</p>
+                <div class="approach-box">
+                    <h4>Impact</h4>
+                    <p>This work reframes therapeutic targets: instead of merely thinning mucus, we should focus on reducing adhesion and cohesion to enable effective cough clearance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="pcd">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 4</p>
+                <h2 class="section-title">Primary Ciliary Dyskinesia &amp; Ciliopathy Biology</h2>
+            </div>
+            <div class="research-area">
+                <p>Primary ciliary dyskinesia (PCD) is a genetically heterogeneous disorder in which defective motile cilia compromise mucociliary clearance from birth. We study how ciliary dysfunction interacts with mucus concentration, airway geometry, and gravity to determine whether mucus remains mobile, forms adherent plaques, or progresses to airway-occluding plugs.</p>
+                <p>Our recent identification of cilia-independent gas-liquid transport during tidal breathing has expanded this framework: airflow can transport sufficiently hydrated mucus even when ciliary beating is absent. We are defining the material and physiological conditions that permit this residual clearance pathway, and how hydration, breathing, and mucolytic strategies might be combined to improve airway clearance in PCD and related ciliopathies.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>How do ciliary motility defects alter mucus transport, retention, and regional plug formation?</li>
+                    <li>What mucus concentration and mechanical thresholds permit gas-liquid transport when cilia fail?</li>
+                    <li>How do breathing pattern, body orientation, cough, and airway hydration interact to support clearance in PCD?</li>
+                    <li>Which chemical or physical interventions restore functionally meaningful clearance in cilia-impaired airways?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>We combine differentiated human airway cultures, quantitative ciliary-beat and mucus-transport measurements, cilia-deficient mouse models, and gravity-controlled imaging platforms. These systems allow us to resolve cilia-dependent and cilia-independent contributions to clearance and to test intervention strategies with direct functional endpoints.</p>
+                <div class="approach-box">
+                    <h4>Translational Goal</h4>
+                    <p>By identifying clearance mechanisms that remain available when motile cilia are impaired, we aim to develop practical strategies that reduce mucus retention and progressive airway injury in PCD.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="mucus-plugs">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 5</p>
+                <h2 class="section-title">Mucus Plug Pathogenesis &amp; Clearance</h2>
+            </div>
+            <div class="research-area">
+                <p>Mucus plugs are hyperconcentrated mucus masses that obstruct airways and are increasingly recognized as active drivers of airway dysfunction, not merely residual secretions. Our current work tests the obstruction paradigm: plug osmotic pressure can compress the periciliary layer, stall clearance, and impose sustained mechanical loads on the airway wall that may contribute to distension, epithelial remodeling, and progression toward bronchiectasis.</p>
+                <p>We also define why plugs persist and how they can be cleared. Static aqueous exposure may soften a plug without producing meaningful dissolution, because transport into and through the dense mucin network is diffusion-limited. We therefore test chemical mucolytics and mucinases together with mechanical adjuncts, including cyclic compression and ultrasound, and pair dissolution with sustained hydration to prevent re-concentration after the plug opens.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>How does mucus concentration generate the osmotic forces that remodel airway walls and submucosal glands?</li>
+                    <li>What distinguishes a reversible mucus gel from a persistent, airway-occluding plug?</li>
+                    <li>Which chemical and mechanical interventions accelerate dissolution and produce mucus that can be cleared by cilia or cough?</li>
+                    <li>Does clearing plugs restore regional airway function and reverse early airway-wall remodeling?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>We integrate human mucus plugs and airway cultures with quantitative dissolution assays, force measurements, mouse models of CF-like and asthma-like mucus obstruction, and a cough-competent sheep occlusion model. Across these systems, we measure plug material properties, proximal-versus-distal clearance, delivery mode, and airway-wall recovery after clearance.</p>
+                <div class="approach-box">
+                    <h4>Therapeutic Principle</h4>
+                    <p>Effective plug therapy must do more than reduce viscosity: it must overcome the local dissolution barrier, reduce adhesion and cohesion, and maintain hydration long enough for the mobilized mucus to clear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="therapy">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 6</p>
+                <h2 class="section-title">Therapeutic Approaches</h2>
+            </div>
+            <div class="research-area">
+                <p>Restoring mucus hydration is a rational therapeutic strategy for muco-obstructive diseases. Our work has evaluated multiple approaches: hypertonic saline, TMEM16A potentiators, CFTR modulators, and osmolyte-based strategies.</p>
+                <p>We demonstrated that nebulized hypertonic saline improves mucociliary clearance in chronic bronchitis and that even partial restoration of CFTR function (~25% of normal) can normalize mucus transport rates in CF airway epithelia.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>What level of CFTR function is required to normalize clearance?</li>
+                    <li>Which therapeutic approach is most effective for which patient subgroup?</li>
+                    <li>Can we combine approaches for synergistic benefit?</li>
+                    <li>How do we overcome mucus adhesion/cohesion barriers to therapy?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>We conduct clinical trials in CF and chronic bronchitis patients, measure clearance using scintigraphy and nasal dye clearance, and use in vitro systems to screen novel compounds.</p>
+                <div class="approach-box">
+                    <h4>Clinical Translation</h4>
+                    <p>Our research has informed multiple therapies now in clinical use, including hypertonic saline, mannitol, and CFTR modulator combinations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="dry-air">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 7</p>
+                <h2 class="section-title">Dry Air &amp; Airway Health</h2>
+            </div>
+            <div class="research-area">
+                <p>Inhaled air is not merely a carrier of oxygen — its water content directly shapes airway health. As global temperatures rise, the air humans breathe has an ever-greater drying potential, and our recent work shows that this dehydrating air poses a tangible threat to the lung's mucus barrier. When the inspired airstream is too dry, evaporation during tidal breathing progressively thins the airway mucus layer and compresses the underlying epithelium, disrupting the carefully balanced hydration on which mucociliary clearance depends.</p>
+                <p>In a 2025 study in <strong>Communications Earth &amp; Environment</strong>, we combined continuum modeling with well-differentiated human tracheal-bronchial cultures to show that breathing progressively drier air (95%, 60%, and 30% relative humidity at body temperature) thins the mucus layer by 5%, 35%, and 58%, respectively. The associated compression of airway epithelial cells elevates secretion of inflammatory cytokines including TNF-α, IL-33, and IL-6, and mice with a muco-inflammatory phenotype exposed to intermittent dry air for one week develop measurable pathological changes. Coupled with climate model simulations, this work predicts that large parts of the United States will face elevated airway-inflammation risk by the latter half of this century.</p>
+                <p>We have extended this line of inquiry to heat waves, which increasingly expose airways — often during mouth breathing — to extreme dryness. Using airway-lining interface cultures of human bronchial epithelial cells, we found that the mucosal collapse caused by dry heat alters expression of genes central to airway hypersensitivity and ion transport, including TRPV4, PIEZO1, SCNN1A, SCNN1B, ANO1, and CFTR. Critically, this collapse can be reversed: inhaled alkaline (pH &gt; 8) hypertonic divalent-salt aerosols rehydrated the epithelial surface, and reanalysis of cough recordings from a recent clinical trial showed such aerosols reduced placebo-adjusted cough bouts by 34% among refractory chronic cough patients. This work, reported in <strong>Scientific Reports</strong> (in press), positions inhaled endogenous ions as a potential buffer against the growing respiratory burden of a warming climate.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>How does the drying potential of inhaled air disrupt mucus layer hydration?</li>
+                    <li>Which molecular pathways link dehydration-driven epithelial compression to inflammation and airway hypersensitivity?</li>
+                    <li>What regional and population thresholds determine vulnerability to dry-air injury?</li>
+                    <li>Can targeted strategies — from reconditioning inspired air to inhaled ion therapies — protect the airway barrier?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>We integrate mathematical modeling of water transport in the airway surface liquid, climate-model projections, physiology in well-differentiated human airway cultures and mouse models with muco-inflammatory phenotypes, and clinical data on inhaled therapeutic aerosols. This lets us connect planetary-scale changes in atmospheric water content to molecular events at the epithelial surface.</p>
+                <div class="approach-box">
+                    <h4>Implications</h4>
+                    <p>Understanding how dry air drives mucus dehydration, inflammation, and cough hypersensitivity points toward both physiological damage-mitigation strategies and practical interventions — from humidifying and conditioning inspired air to aerosol therapies — that preserve mucus barrier function as the climate continues to warm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="models">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Research Area 8</p>
+                <h2 class="section-title">Computational &amp; Mathematical Models</h2>
+            </div>
+            <div class="research-area">
+                <p>Quantitative understanding requires mathematical models that integrate ion transport, fluid dynamics, and mechanical forces. We developed mechanochemical models of ASL regulation that predicted behaviors not apparent from single experiments—for example, that the system exhibits bistability near critical thresholds of CFTR function.</p>
+                <p>These models have been validated in cell culture and mouse models, and they now guide therapeutic hypothesis generation and patient stratification.</p>
+                <h3>Key Biological Questions</h3>
+                <ul>
+                    <li>What are the critical thresholds of CFTR function for normal clearance?</li>
+                    <li>Can we predict which patients will respond to specific therapies?</li>
+                    <li>How do multiple interventions interact when combined?</li>
+                    <li>What are the system's emergent properties not apparent from components alone?</li>
+                </ul>
+                <h3>Approach</h3>
+                <p>Our models incorporate ATP release kinetics, purinergic receptor activation, ion channel dynamics, and osmotic water flow. We use both analytical solutions and numerical simulation to explore parameter space and generate testable predictions.</p>
+                <div class="approach-box">
+                    <h4>Value of Modeling</h4>
+                    <p>Mathematical models enable us to test thousands of parameter combinations computationally, identifying optimal therapeutic strategies before costly clinical trials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="brush">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Landmark Discovery</p>
+                <h2 class="section-title">The Periciliary Brush Model</h2>
+            </div>
+            <div class="research-area">
+                <p>Previously, the periciliary layer was thought to be simple fluid. In our landmark 2012 Science paper, we discovered that it contains a structured brush of mucins that physically separates mucus from the epithelial surface. This brush is essential for ciliary function and explains why mucus and cilia can coexist without fouling.</p>
+                <p>When mucus hyperconcentrates, the brush collapses, mucus contacts the epithelium directly, and clearance fails. This finding fundamentally changed how the field conceptualizes mucociliary clearance.</p>
+                <h3>Scientific Impact</h3>
+                <ul>
+                    <li>Explains how the PCL maintains distinct properties from overlying mucus</li>
+                    <li>Reveals why mucus dehydration leads to clearance failure</li>
+                    <li>Guides development of therapies targeting the periciliary space</li>
+                    <li>Provides a framework for understanding ciliary dysfunction in disease</li>
+                </ul>
+            </div>
+
+            <div class="video-section">
+                <div class="video-container">
+                    <video autoplay loop muted playsinline poster="imgs/periciliary-brush.jpg">
+                        <source src="videos/mucociliary-clearance.mp4" type="video/mp4">
+                    </video>
+                    <div class="video-overlay">
+                        <h4>Mucociliary Clearance Animation</h4>
+                        <p>Visualization of coordinated ciliary beating propelling mucus with trapped particles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Our Framework</p>
+                <h2 class="section-title">Scientific Philosophy</h2>
+            </div>
+            <div class="philosophy-section">
+                <h2>Biophysical Framework for Airway Physiology</h2>
+                <p>Our research is unified by a biophysical perspective on airway physiology. We view the airways not merely as a collection of cells and molecules, but as a mechanical system governed by physical forces—osmotic pressure gradients, adhesive energies, fluid shear stress, and interfacial tension.</p>
+                <p>This framework emerged inductively from our experimental observations: mucus transport cannot be understood without quantifying the forces that mucus exerts on surfaces, and ASL volume cannot be predicted without modeling the osmotic balance between cells, fluid, and the extracellular matrix.</p>
+                <div class="pillars">
+                    <div class="pillar">
+                        <h4>Structure-Function</h4>
+                        <p>Understanding design principles from molecular to organ scale</p>
+                    </div>
+                    <div class="pillar">
+                        <h4>Quantitative Rigor</h4>
+                        <p>Measuring what we study with precision</p>
+                    </div>
+                    <div class="pillar">
+                        <h4>Translational Focus</h4>
+                        <p>From mechanism to therapy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Milestones</p>
+                <h2 class="section-title">Representative Discoveries</h2>
+            </div>
+            <div class="discoveries-grid">
+                <div class="discovery-card">
+                    <span class="year">2012</span>
+                    <p class="journal">Science</p>
+                    <h4>The Periciliary Brush Model</h4>
+                    <p>Discovered the brush-like structure of the periciliary layer that prevents mucus penetration to the epithelial surface.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2014</span>
+                    <p class="journal">Journal of Clinical Investigation</p>
+                    <h4>Mucus Hyperconcentration in CF</h4>
+                    <p>Established mucus hyperconcentration—not altered pH—as the primary abnormality in CF airway secretions.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2018</span>
+                    <p class="journal">PNAS</p>
+                    <h4>Mucus Adhesion and Cohesion</h4>
+                    <p>Elucidated biophysical mechanisms governing mucus adhesion and cohesion in cough clearance.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2022</span>
+                    <p class="journal">Science Advances</p>
+                    <h4>Submucosal Gland Dysfunction</h4>
+                    <p>Unified understanding of airway defects in CF through submucosal gland dysfunction.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2022</span>
+                    <p class="journal">Nature Genetics</p>
+                    <h4>CRISPR Screens for SARS-CoV-2</h4>
+                    <p>Identified mucins as critical host factors influencing SARS-CoV-2 infection.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2023</span>
+                    <p class="journal">Science Translational Medicine</p>
+                    <h4>Hypoxia-Mucus Dysfunction Link</h4>
+                    <p>Demonstrated that airway hypoxia drives mucus dysfunction through specific molecular pathways.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2025</span>
+                    <p class="journal">Communications Earth &amp; Environment</p>
+                    <h4>Climate Change &amp; Airway Dehydration</h4>
+                    <p>Showed that global warming and the drying potential of inhaled air dehydrate and inflame human airways, threatening mucus barrier function.</p>
+                </div>
+                <div class="discovery-card">
+                    <span class="year">2026</span>
+                    <p class="journal">Journal of Clinical Investigation</p>
+                    <h4>Cilia-Independent Gas-Liquid Transport</h4>
+                    <p>Identified tidal-breathing-driven, cilia-independent gas-liquid transport as a third mechanism of airway mucus clearance, significant in ciliary dysfunction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Brian Button Lab</h3>
+                <p>Advancing understanding of airway mucus biology and cystic fibrosis through rigorous biophysical research at the University of North Carolina.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Research</h4>
+                <ul>
+                    <li><a href="research.html">Overview</a></li>
+                    <li><a href="research.html#cf-mucus">CF &amp; Mucus</a></li>
+                    <li><a href="research.html#asl">ASL Regulation</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Lab</h4>
+                <ul>
+                    <li><a href="people.html">People</a></li>
+                    <li><a href="publications.html">Publications</a></li>
+                    <li><a href="pictures.html">Pictures</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="links.html">External Links</a></li>
+                                        <li><a href="collaborators.html">Collaborators</a></li>
+<li><a href="https://www.med.unc.edu" target="_blank">UNC Medicine</a></li>
+                    <li><a href="https://www.cff.org" target="_blank">CF Foundation</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>University of North Carolina School of Medicine</span>
+            <span>&copy; 2026 Brian Button Lab. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            this.classList.toggle('active');
+            document.getElementById('navLinks').classList.toggle('active');
+        });
+    </script>
+    <script src="mucus-bg.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+{
+  "pi": {
+    "name": "Brian Button, PhD",
+    "photo": "imgs/brian-button.png",
+    "titles": "Professor · Marsico Lung Institute\nDepartment of Biochemistry & Biophysics · UNC School of Medicine",
+    "bio": [
+      "Brian Button studies the biophysics of mucus and how the airway surface defends itself against inhaled insults. His work has helped reframe airway disease as fundamentally a problem of mucus hydration and gel mechanics — a perspective that now informs therapeutic development across cystic fibrosis, COPD, and severe respiratory infection.",
+      "He completed his doctoral work in cellular physiology and joined UNC's Marsico Lung Institute to pursue questions at the interface of cell biology and soft-matter physics. The Button Lab today combines microrheology, ion-transport electrophysiology, advanced live-cell imaging, and primary human airway models to ask — at every scale from molecules to patients — how the lung keeps itself clean."
+    ],
+    "meta": [
+      { "label": "Office", "value": "6017 Thurston-Bowles Building, Chapel Hill, NC" },
+      { "label": "Email", "value": "bbutton@med.unc.edu", "href": "mailto:bbutton@med.unc.edu" },
+      { "label": "Department", "value": "Biochemistry & Biophysics" },
+      { "label": "Center", "value": "Marsico Lung Institute / CF Research Center" },
+      { "label": "Publications", "value": "PubMed ↗", "href": "https://pubmed.ncbi.nlm.nih.gov/?term=Brian+Button&sort=date", "external": true }
+    ]
+  },
+  "members": [
+    {
+      "name": "Mark Gutay",
+      "role": "Research Associate and Lab Manager",
+      "photo": "imgs/mark-gutay.jpg",
+      "bio": "Runs lab operations and is an expert in studying mucus clearance mechanisms. He has co-authored many of our papers on understanding mucus clearance in health and disease, including the lab's most recent J Clin Invest paper on cilia-independent mucus transport."
+    },
+    {
+      "name": "Courtney Haskins",
+      "role": "Research Associate",
+      "photo": "imgs/courtney-haskins.jpg",
+      "bio": "Leads our research on creating models of Primary Ciliary Dyskinesia (PCD) to understand how ciliopathies affect mucus properties and its clearance."
+    },
+    {
+      "name": "Matt Pappas",
+      "role": "Graduate Student",
+      "photo": "imgs/matt-pappas.jpg",
+      "bio": "Works on understanding the role of novel mucinases in airway bacterial infection in cystic fibrosis."
+    },
+    {
+      "name": "Catherine \"Cricket\" Schoettelkotte",
+      "role": "Graduate Student",
+      "photo": "imgs/catherine-schoettelkotte.jpg",
+      "bio": "Investigates how genetic and environmental changes affect the efficiency of cilia- and cough-mediated mucus clearance in the airways."
+    },
+    {
+      "name": "Viktoria Gustafsson",
+      "role": "Graduateraduate Student",
+      "photo": "imgs/viktoria-gustafsson.jpg",
+      "bio": "Investigating how to clear mucus plugs from the airways of people with lung disease."
+    },
+    {
+      "name": "Maeve McCann",
+      "role": "Undergraduate Student",
+      "photo": "imgs/maeve-mccann.jpg",
+      "bio": "Manages our stock of human airway epithelial cultures and organizes a project to understand mucus production in various CRISPR knockout cell models."
+    },
+    {
+      "name": "(Future Student Here)",
+      "role": "Undergraduate Student",
+      "photo": "imgs/unknown.jpg",
+      "bio": "Manages our stock of human airway epithelial cultures and organizes a project to understand mucus production in various CRISPR knockout cell models."
+    },
+    {
+      "name": "Bella Grace",
+      "role": "Lab Mascot",
+      "photo": "imgs/Bella.jpg",
+      "bio": "Bella is a 1-year old Golden Retriever. She is currently working on her Ph.D. in treatology and becoming a therapy dog. Her research interests include figuring out ways to get the lab members to give her more belly scratches."
+    }
+  ]
+}
